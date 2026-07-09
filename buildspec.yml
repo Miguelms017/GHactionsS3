@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+   runtime-version:
+     nodejs: 20
+   commands:
+     - echo "installing Dependencies via NodeJS V.20"
+     - npm i
+     - echo "done"
+  build:
+   commands:
+     - echo "Building..."
+     - npm run build
+     - echo "done"
+
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: dist
