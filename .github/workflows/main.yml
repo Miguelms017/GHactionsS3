@@ -31,4 +31,5 @@ jobs:
           aws-region: us-east-1
 
       - name: Deploy
-        run: aws s3 sync build s3://ghactionss3-ms017 --delete
+        run: aws s3 sync dist s3://ghactionss3-ms017 --delete
+        # because it is on vite, the destination folder would be dist/ and no build/
